@@ -1,0 +1,23 @@
+body {
+    background-color: black;
+}
+
+#header {
+    width: 100%;
+}
+
+#headpic{
+    width: 960px;
+    height: auto;
+}
+
+#content {
+    background-color: grey;
+}
+
+#hangmanlabel {
+    position: absolute;
+    bottom: 200px;
+    transform: rotate(-20deg);
+    color: red;
+}
