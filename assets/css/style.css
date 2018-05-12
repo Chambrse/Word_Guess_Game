@@ -19,5 +19,9 @@ body {
     position: absolute;
     bottom: 200px;
     transform: rotate(-20deg);
-    color: red;
+    color: rgb(189, 125, 125);
+}
+
+#houseBanner {
+    width: 100%;
 }
