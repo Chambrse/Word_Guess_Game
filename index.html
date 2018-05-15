@@ -16,8 +16,12 @@
     <!-- Javascript link -->
     <script src="assets/javascript/game.js"></script>
 
+
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/Stark_favicon.ico" type="image/x-icon" />
+
+    <!-- Monospaced font I like -->
+    <link href="https://fonts.googleapis.com/css?family=Cousine" rel="stylesheet">
 
 
     <!-- Title -->
@@ -50,12 +54,16 @@
             <div class="col-4">
                 <div id="gameSpace">
                     <h1>Hangman!</h1>
-                    <script type="text/javascript">
-                        hangman();
-                    </script>
+                    <p>Press a button to get started!</p>
+                    <h2><p id="word">_ _ _ _ _</p></h2>
+                    <p>Wins: 0</p>
+                    <p>Guesses Remaining: 10</p>
                 </div>
             </div>
         </div>
+
+        <!-- Start the game -->
+        <script type="text/javascript">hangman();</script>
 
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->

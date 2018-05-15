@@ -30,3 +30,8 @@ h1 {
     display: flex;
     justify-content: center;
 }
+
+
+p#word{
+    font-family: 'Cousine', monospace;
+}
