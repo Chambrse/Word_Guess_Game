@@ -7,7 +7,7 @@ body {
 }
 
 #headpic{
-    width: 1120px;
+    width: 100%;
     height: auto;
 }
 
@@ -34,4 +34,5 @@ h1 {
 
 p#word{
     font-family: 'Cousine', monospace;
+    letter-spacing: 10px;
 }
