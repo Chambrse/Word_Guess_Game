@@ -5,7 +5,6 @@ function hangman() {
     
     wordnumber = Math.floor(Math.random() * wordlist.length);
     newWord = wordlist[wordnumber];
-    console.log(newWord);
 
     /* Get the banner */
     var pathlist = ["assets/images/Arryn_Sigil.jpg", "assets/images/Baratheon_Sigil.jpg", "assets/images/Greyjoy_Sigil.jpg", "assets/images/Lannister_Sigil.jpg", "assets/images/Martell_Sigil.jpg", "assets/images/Mormont_Sigil.jpg", "assets/images/Stark_Sigil.jpg", "assets/images/Targaryen_Sigil.jpg", "assets/images/Tully_Sigil.jpg", "assets/images/Tyrell_Sigil.jpg",]
@@ -55,11 +54,8 @@ function hangman() {
 
         /* if you find another occurence, replace that dash with its corresponding letter. Then, look for another occurence. Until there are no more occurences. */
         while (index != -1) {
-            console.log('index1', index);
             dashString = dashString.substr(0, index) + newWord[index] + dashString.substr(index + 1);
-            console.log(dashString);
             index = newWord.indexOf(event.key, index + 1);
-            console.log('index2', index);
         }
 
         /* If the word is correctly guessed and you haven't run out of guesses, you win!
@@ -91,7 +87,6 @@ function hangman() {
 
             wordnumber = Math.floor(Math.random() * wordlist.length);
             newWord = wordlist[wordnumber];
-            console.log(newWord);
             path = pathlist[wordnumber];
 
             dashString = "";
