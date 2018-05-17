@@ -11,19 +11,25 @@ body {
     height: auto;
 }
 
-#content {
+#gameSpace {
     background-color: grey;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 200px;
 }
 
 #hangmanlabel {
     position: absolute;
-    bottom: 200px;
+    bottom: 50%;
+    width: 10%;
+    height: auto;
     transform: rotate(-20deg);
     color: rgb(189, 125, 125);
 }
 
 #houseBanner {
     width: 100%;
+    margin-bottom: 100px;
 }
 
 h1 {

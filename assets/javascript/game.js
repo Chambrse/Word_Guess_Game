@@ -11,7 +11,6 @@ function hangman() {
     var pathlist = ["assets/images/Arryn_Sigil.jpg", "assets/images/Baratheon_Sigil.jpg", "assets/images/Greyjoy_Sigil.jpg", "assets/images/Lannister_Sigil.jpg", "assets/images/Martell_Sigil.jpg", "assets/images/Mormont_Sigil.jpg", "assets/images/Stark_Sigil.jpg", "assets/images/Targaryen_Sigil.jpg", "assets/images/Tully_Sigil.jpg", "assets/images/Tyrell_Sigil.jpg",]
     path = pathlist[wordnumber];
 
-    document.getElementById("houseBanner").src = path;
 
 
     /* other variables */
@@ -62,8 +61,8 @@ function hangman() {
                 dashString = dashString + "_";
             }
 
-/*             document.getElementById("housebanner").setAttribute("src", path);
- */
+            document.getElementById("houseBanner").setAttribute("src", path);
+
         } else if (guesses == 0) {
             wins = 0;
             guesses = 10;
