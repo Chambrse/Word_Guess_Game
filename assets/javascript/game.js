@@ -9,7 +9,12 @@ function hangman() {
 
     /* Get the banner */
     var pathlist = ["assets/images/Arryn_Sigil.jpg", "assets/images/Baratheon_Sigil.jpg", "assets/images/Greyjoy_Sigil.jpg", "assets/images/Lannister_Sigil.jpg", "assets/images/Martell_Sigil.jpg", "assets/images/Mormont_Sigil.jpg", "assets/images/Stark_Sigil.jpg", "assets/images/Targaryen_Sigil.jpg", "assets/images/Tully_Sigil.jpg", "assets/images/Tyrell_Sigil.jpg",]
-    path = pathlist[wordnumber];
+    var path = pathlist[wordnumber];
+
+    /* Clues! */
+    var cluelist = ["AS HIGH AS HONOUR", "OURS IS THE FURY", "WE DO NOT SOW", "HEAR ME ROAR", "UNBOWED. UNBENT. UNBROKEN.", "HERE WE STAND", "WINTER IS COMING", "FIRE AND BLOOD", "FAMILY. DUTY. HONOUR", "GROWING STRONG"];
+    var clue = cluelist[wordnumber];
+    document.getElementById("clue").innerHTML = "Clue: " + clue;
 
 
 
@@ -25,7 +30,7 @@ function hangman() {
     }
     document.getElementById("word").innerHTML = dashString;
 
-    var winSound = new Audio("\assets\sounds\165491__chripei__victory-cry-reverb-2.wav");
+    var winSound = new Audio("assets/sounds/165491__chripei__victory-cry-reverb-2.wav");
     
 
 
@@ -65,14 +70,18 @@ function hangman() {
             guesses = 10;
             letters = [];
 
-            newWord = wordlist[Math.floor(Math.random() * wordlist.length)];
+            winSound.play();
+            document.getElementById("houseBanner").setAttribute("src", path);
+
+            wordnumber2 = Math.floor(Math.random() * wordlist.length);
+            newWord = wordlist[wordnumber2];
+            console.log(newWord);
+            path = pathlist[wordnumber2];
 
             dashString = "";
             for (var i = 0; i < newWord.length; i++) {
                 dashString = dashString + "_";
             }
-
-            document.getElementById("houseBanner").setAttribute("src", path);
 
             /*  if you run out of guesses, you lose. reset*/
         } else if (guesses == 0) {
@@ -80,7 +89,10 @@ function hangman() {
             guesses = 10;
             letters = [];
 
-            newWord = wordlist[Math.floor(Math.random() * wordlist.length)];
+            wordnumber = Math.floor(Math.random() * wordlist.length);
+            newWord = wordlist[wordnumber];
+            console.log(newWord);
+            path = pathlist[wordnumber];
 
             dashString = "";
             for (var i = 0; i < newWord.length; i++) {
@@ -89,6 +101,7 @@ function hangman() {
         }
 
         /* Update game board. */
+        document.getElementById("clue").innerHTML = "Clue: " + clue;
         document.getElementById("wins").innerHTML = "Wins: " + wins;
         document.getElementById("guesses").innerHTML = "Guesses Remaining: " + guesses;
         document.getElementById("word").innerHTML = dashString;
