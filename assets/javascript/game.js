@@ -69,10 +69,11 @@ function hangman() {
             winSound.play();
             document.getElementById("houseBanner").setAttribute("src", path);
 
-            wordnumber2 = Math.floor(Math.random() * wordlist.length);
-            newWord = wordlist[wordnumber2];
+            wordnumber = Math.floor(Math.random() * wordlist.length);
+            newWord = wordlist[wordnumber];
             console.log(newWord);
-            path = pathlist[wordnumber2];
+            path = pathlist[wordnumber];
+            clue = cluelist[wordnumber];
 
             dashString = "";
             for (var i = 0; i < newWord.length; i++) {
@@ -88,6 +89,7 @@ function hangman() {
             wordnumber = Math.floor(Math.random() * wordlist.length);
             newWord = wordlist[wordnumber];
             path = pathlist[wordnumber];
+            clue = cluelist[wordnumber];
 
             dashString = "";
             for (var i = 0; i < newWord.length; i++) {
