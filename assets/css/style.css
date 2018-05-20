@@ -15,7 +15,6 @@ body {
     background-color: grey;
     border-radius: 5px;
     padding: 20px;
-    margin-bottom: 200px;
     height: 100%;
 }
 
@@ -30,7 +29,6 @@ body {
 
 #houseBanner {
     width: 100%;
-    margin-bottom: 100px;
 }
 
 h1 {
