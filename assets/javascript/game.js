@@ -50,7 +50,10 @@ function hangman() {
             /* if you've guessed this letter, complain */
             else if (letters.includes(event.key)) {
                 $("#toolTip").text("You've already guessed that letter!");
-            }
+                setTimeout(function () {
+                    $("#toolTip").text("")
+                }, 1000);
+            };
 
             /* get index of first occurence of the input in the word. */
             var index = 0;
