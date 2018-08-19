@@ -1,8 +1,8 @@
 function hangman() {
 
-    /* Choose the first word */
     var wordlist = ["arryn", "baratheon", "greyjoy", "lannister", "martell", "mormont", "stark", "targaryen", "tully", "tyrell"];
-
+    
+    /* Choose the first word */
     wordnumber = Math.floor(Math.random() * wordlist.length);
     newWord = wordlist[wordnumber];
 
@@ -29,6 +29,7 @@ function hangman() {
     }
     document.getElementById("word").innerHTML = dashString;
 
+    // Make the sound that plays when you win!
     var winSound = new Audio("assets/sounds/165491__chripei__victory-cry-reverb-2.wav");
 
 
