@@ -3,9 +3,9 @@ Hangman style game for practice with javascript
 
 Shane Chambry
 
-```
+
 https://chambrse.github.io/Word_Guess_Game/
-```
+
 
 This app focusses on event listeners. The main one used in my solution is onKeyup. Other things sprinkled in include some simple input validation, string manipulation, and more dynamically generated elements.
 
